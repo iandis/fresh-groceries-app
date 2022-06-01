@@ -1,0 +1,25 @@
+name: local_storage
+description: The Local Storage Module
+version: 0.0.1
+
+publish_to: "none"
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  base:
+    path: ../base
+  get_it: 7.2.0
+  injectable: 1.5.3
+  meta: 1.7.0
+  path: 1.8.1
+  sqflite: 2.0.2+1
+
+dev_dependencies:
+  build_runner: 2.1.10
+  injectable_generator: 1.5.3
+  lint: 1.8.2
+
+dependency_overrides:
+  path: 1.8.1
