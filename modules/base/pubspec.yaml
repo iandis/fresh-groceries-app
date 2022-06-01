@@ -1,0 +1,23 @@
+name: base
+description: The Base Module
+version: 0.0.1
+
+publish_to: "none"
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=2.10.5"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get_it: 7.2.0
+  injectable: 1.5.3
+  meta: 1.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lint: 1.8.2
+
+flutter:
