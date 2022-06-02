@@ -1,0 +1,31 @@
+name: home
+description: The Home Feature
+version: 0.0.1
+
+publish_to: "none"
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: "2.10.5"
+
+dependencies:
+  base:
+    path: ../../modules/base
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  get_it: 7.2.0
+  injectable: 1.5.3
+  meta: 1.7.0
+  product:
+    path: ../product
+  shared_resources:
+    path: ../../modules/shared_resources
+
+dev_dependencies:
+  build_runner: 2.1.10
+  injectable_generator: 1.5.3
+  lint: 1.8.2
+
+flutter:
+  uses-material-design: true
