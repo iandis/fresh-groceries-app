@@ -9,9 +9,7 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:sqflite/sqflite.dart' as _i6;
 
 import 'config/local_storage_config.dart' as _i3;
-import 'local_storage/local_storage.dart' as _i7;
-import 'local_storage/local_storage_impl.dart' as _i8;
-import 'local_storage_module.dart' as _i9;
+import 'local_storage_module.dart' as _i7;
 import 'table_manager/local_storage_table_manager.dart' as _i4;
 import 'table_manager/local_storage_table_manager_impl.dart'
     as _i5; // ignore_for_file: unnecessary_lambdas
@@ -27,13 +25,11 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       preResolve: true);
   gh.singleton<_i4.LocalStorageTableManager>(
       _i5.LocalStorageTableManagerImpl());
-  await gh.singletonAsync<_i6.Database>(
+  await gh.singletonAsync<_i6.DatabaseExecutor>(
       () => localStorageModule.provideSQLiteDatabase(
           get<_i3.LocalStorageConfig>(), get<_i4.LocalStorageTableManager>()),
       preResolve: true);
-  gh.lazySingleton<_i7.LocalStorage>(
-      () => _i8.LocalStorageImpl(get<_i6.Database>()));
   return get;
 }
 
-class _$LocalStorageModule extends _i9.LocalStorageModule {}
+class _$LocalStorageModule extends _i7.LocalStorageModule {}
