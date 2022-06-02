@@ -4,9 +4,14 @@ import 'package:get_it/get_it.dart';
 import 'package:meta/meta.dart';
 
 class ViewRouter {
-  const ViewRouter(this._getIt);
+  const ViewRouter({
+    required GetIt getIt,
+    required this.initialRoute,
+  }) : _getIt = getIt;
 
   final GetIt _getIt;
+
+  final String initialRoute;
 
   @nonVirtual
   Route<dynamic> call(RouteSettings settings) {
