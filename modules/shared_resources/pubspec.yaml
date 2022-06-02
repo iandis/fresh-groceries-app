@@ -1,0 +1,21 @@
+name: shared_resources
+description: The Shared Resources Module
+version: 0.0.1
+
+publish_to: "none"
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: "2.10.5"
+
+dependencies:
+  base:
+    path: ../base
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  lint: 1.8.2
+
+flutter:
+  uses-material-design: true
